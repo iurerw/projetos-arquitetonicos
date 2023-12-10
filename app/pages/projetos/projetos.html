@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/app/css/bootstrap.css">
+      <link rel="stylesheet" href="/app/css/style.css">
+      <link rel="stylesheet" href="/app/pages/projetos/projetos.css">
+
+    </head>
+    <body>
+      <div class="menu"></div>
+        <article class="bg-secondary m-5 rounded">
+            <div class="container-fluid">
+                <div class="row p-5">
+                    <h1 class="justify-content-center text-center">
+                        PROJETOS
+                    </h1>
+                </div>
+                <div class="row ">
+                    <div class="col-8 col-sm-10 bg-white m-5 p-3 ">
+                        <p class="d-flex justify-content-center">
+                            Projeto -- Arquiteto -- M² -- CAU
+                        </p>
+                        <hr>
+                        
+                        <p id="project0">Ainda não projetado</p>
+                        <hr>
+                        <p id="project1">Ainda não projetado</p>
+                        <hr>
+                        <p id="project2">Ainda não projetado</p>
+                        <hr>
+                        <p id="project3">Ainda não projetado</p>
+                        <hr>
+                        <p id="project4">Ainda não projetado</p>
+                        <hr>
+                        <button type="button" class="btn btn-secondary d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#modal-cadastro" id="add-project">Cadastrar Projeto</button>
+                        
+                        <div class="modal fade" id="modal-cadastro" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5 text-black" id="modal-cadastro">Cadastro de Projeto</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-bg-secondary bg-primary">
+                                  <!-- Conteudo do formulário para login -->
+                                  <form action="" id="form-project" class="form-control">
+                                    <label for="cliente" class="form-label">Cliente</label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="client" 
+                                        placeholder="Cliente"
+                                        pattern="^(\s?[A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)?(\s[A-ZÀ-Ú][a-zà-ú]*)+"
+                                        autofocus
+                                        required
+                                        >
+                                        <span class="error-text" id="client-error">Nome inválido</span>
+                                    <hr>
+                                        <label for="arquiteto" class="form-label">Arquiteto</label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="architect" 
+                                        placeholder="Arquiteto"
+                                        pattern="^(\s?[A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)?(\s[A-ZÀ-Ú][a-zà-ú]*)+"
+                                        required
+                                        >
+                                        <span class="error-text" id="architect-error">Nome inválido</span>
+                                    <hr>
+                                    <label for="square" class="form-label">Metros ²</label>
+                                    <input 
+                                        type="number" 
+                                        class="form-control" 
+                                        id="square" 
+                                        placeholder="Metros ²"
+                                        required
+                                        >
+                                        <span class="error-text" id="square-error">Número inválido</span>
+                                    <hr>
+                                    
+                                    <label for="cpf" class="form-label">CPF</label>
+                                    <input                                         
+                                        class="form-control" 
+                                        type="text" 
+                                        name="cpf" 
+                                        id="cpf" 
+                                        placeholder="CPF" 
+                                        pattern="\d{3}.\d{3}.\d{3}-\d{2}"
+                                        required
+                                        >
+                                        <span class="error-text" id="cpf-error">CPF inválido</span>
+                                    <hr>
+                                    <label for="cau" class="form-label">CAU</label>
+                                    <input                                         
+                                        class="form-control" 
+                                        type="text" 
+                                        name="cau" 
+                                        id="cau" 
+                                        placeholder="CAU" 
+                                        pattern="\d{6}-\d{2}"
+                                        required
+                                        >
+                                        <span class="error-text" id="cau-error">CAU inválido</span>
+                                    <hr>
+                                    <label for="url-image" class="form-label">URL</label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="url-image" 
+                                        placeholder="URL"
+                                        autofocus
+                                        required
+                                        >
+                                        <span class="error-text" id="url-image-error">url inválido</span>
+
+                                    <hr>
+                                    <div class="form-check">
+                                      <input id="check" class="form-check-input" type="checkbox" value="finalizado" id="flexCheckIndeterminate">
+                                      <label class="form-check-label" for="flexCheckIndeterminate">
+                                        Projeto Finalizado
+                                      </label>
+                                    </div>
+                                        <div class="modal-footer mt-1 bg-primary">
+                                            <button type="submit" class="btn btn-secondary fw-bold">Confirmar</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                                        </div>
+                                        
+                                  </form>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <div class="footer"></div>
+      
+      <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="/dist/jquery.mask.min.js"></script>
+      <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script type="module" src="/app/pages/projetos/projeto.js"></script>
+    </body>
+
+</html>

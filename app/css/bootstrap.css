@@ -1,0 +1,37 @@
+:root {
+    --primary-color: #343A40;
+    --secondary-color: #eeeaea;
+    --terciary-color: #8b8888; 
+    --btn-color: #0e0658; 
+  }
+
+  .bg-info{
+    background-color: var(--terciary-color) !important;
+  }
+
+  .bg-primary {
+    background-color: var(--primary-color) !important; 
+  }
+
+  .bg-secondary, .btn-secondary{
+    background-color: var(--secondary-color) !important; 
+  }
+  .btn-secondary{
+    color:black;
+    text-shadow: #343A40;
+  }
+
+  .bg-info {
+    background-color: var(--btn-color) !important;
+  }
+
+  .col{
+    display: inline-flex;
+  }
+
+  .btn-outline-primary{
+    border: none;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    opacity: 70%;
+  }

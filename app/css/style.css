@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap');
+
+html{
+    font-size: 1rem;
+    min-width: 400px;
+}
+
+h1, h2 , h4{
+    font-family: 'Architects Daughter', cursive;
+}
+.btn {
+    font-family: 'Agbalumo';
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+    text-align: justify;
+}
+
+.d-block{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    margin-bottom: 5rem;
+}
+
+footer{
+    margin-right: 5rem;
+     
+}
+.footer-logo{
+    width: 100%;
+}
+
+.error-text {
+    display: none;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+
+p{
+    font-weight: bolder;
+}
+
+#logo{
+    width: 30vw;
+}
+
+
